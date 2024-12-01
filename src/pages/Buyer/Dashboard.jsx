@@ -10,7 +10,7 @@ export default function Dashboard() {
   ];
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 bg-[#0e0f14]">
       <h1 className="text-2xl font-bold text-white">Dashboard</h1>
       
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">

@@ -8,7 +8,7 @@ html, body, #root {
 }
 
 body {
-  background-color: #213659;
+  background-color: #0e0f14;
   font-family: Arial, sans-serif;
 }
 
@@ -16,10 +16,8 @@ body {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
-  background-color: #082441;
+  background-color: #0e0f14;
   color: white;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;

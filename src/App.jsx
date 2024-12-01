@@ -8,14 +8,17 @@ import Navbarr from "./Components/Common/Navbar";
 import LandingPage from "./pages/Common/LandingPage";
 import ContactUs from "./pages/Common/ContactUs";
 import LandingPageLayout from "./pages/Common/LandingPageLayout";
+import MarketPlace from "./pages/Buyer/MarketPlace";
+import SellerDashboard from "./pages/Seller/SellerDashboard";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<LandingPageLayout />}>
-          <Route  index element={<LandingPage />} />
+          <Route index element={<LandingPage />} />
           <Route path="contactus" element={<ContactUs />} />
+          <Route path="market" element={<MarketPlace />} />
         </Route>
         <Route path="/contactus" element={<ContactUs />} />
         <Route
@@ -27,6 +30,9 @@ function App() {
           <Route path="profile" element={<Profile />} />
           <Route path="my-bids" element={<MyBids />} />
           <Route path="products" element={<Products />} />
+        </Route>
+        <Route path="/seller-dashboard" element={<SellerDashboard />}>
+          
         </Route>
       </Routes>
     </BrowserRouter>
