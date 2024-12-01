@@ -2,12 +2,15 @@ import React from 'react'
 import Navbarr from '../../Components/Common/Navbar'
 import { Outlet } from 'react-router-dom'
 
-const LandingPage = () => {
+const LandingPageLayout = () => {
   return (
     <div>
-        LandingPage
-    </div>
+    <Navbarr/>
+    <dib>
+        <Outlet/>
+    </dib>
+</div>
   )
 }
 
-export default LandingPage
+export default LandingPageLayout
