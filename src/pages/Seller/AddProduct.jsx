@@ -1,4 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react'
+
+const AddProduct = () => {
+  return (
+    <div>AddProduct</div>
+  )
+}
+
+export default AddProductimport React, { useState } from 'react';
 
 const ProductForm = () => {
   const [images, setImages] = useState([]); 
