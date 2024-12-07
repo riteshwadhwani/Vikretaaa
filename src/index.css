@@ -2,7 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body, #root {
+html,
+body,
+#root {
   height: 100%;
   margin: 0;
 }
@@ -37,5 +39,5 @@ footer a {
 }
 
 footer a:hover {
-  color: #007bff; 
+  color: #007bff;
 }
