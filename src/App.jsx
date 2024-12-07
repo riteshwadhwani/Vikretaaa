@@ -11,6 +11,7 @@ import MarketPlace from "./pages/Buyer/MarketPlace";
 import SellerDashboard from "./pages/Seller/SellerDashboard";
 import Login from "./pages/Common/Login";
 import SignUp from "./pages/Common/SignUp";
+import AboutUs from "./pages/Common/AboutUs";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="market" element={<MarketPlace />} />
           <Route path="login" element={<Login />} />
           <Route path="signup" element={<SignUp />} />
+          <Route path="aboutus" element={<AboutUs />} />
         </Route>
         <Route path="/contactus" element={<ContactUs />} />
         <Route

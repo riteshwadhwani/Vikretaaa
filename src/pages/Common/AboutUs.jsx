@@ -1,13 +1,13 @@
 import React from 'react';
-import img1 from '../images/img1.png';
-import img2 from '../images/img2.jpg';
-import img3 from '../images/img3.png';
-import img4 from '../images/img4.png';
+import img1 from '../../assets/images/img1.png';
+import img2 from '../../assets/images/img2.jpg';
+import img3 from '../../assets/images/img3.png';
+import img4 from '../../assets/images/img4.png';
 
 const AboutUs = () => {
     return (
-        <div className=' flex flex-col justify-center items-center'>
-            <div className="flex flex-col justify-center items-center px-4 lg:w-[1100px]">
+        <div className=' text-white flex flex-col justify-center items-center'>
+            <div className="flex flex-col justify-center items-center px-4 lg:w-[1300px]">
 
                 {/* Title Section */}
                 <div className="text-center mt-12 md:flex md:flex-col justify-center items-center">

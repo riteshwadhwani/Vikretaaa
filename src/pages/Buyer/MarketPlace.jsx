@@ -37,8 +37,8 @@ function MarketPlace() {
   });
 
   return (
-    <div className="container py-8 bg-[#082441]">
-      <div className="d-flex flex-column flex-md-row justify-content-between align-items-center mb-8">
+    <div className="container py-8 ">
+      <div className="d-flex flex-column flex-md-row justify-content-between align-items-center mb-8 ">
         <h1 className="text-3xl font-bold text-white mb-4 mb-md-0">Live Auctions</h1>
         
         <div className="d-flex gap-4 w-100 w-md-auto">
@@ -64,9 +64,14 @@ function MarketPlace() {
             >
               <option value="all">All Categories</option>
               <option value="electronics">Electronics</option>
-              <option value="antiques">Antiques</option>
-              <option value="art">Art</option>
-              <option value="jewelry">Jewelry</option>
+              <option value="antiques">Fashion</option>
+              <option value="art">Home Appliances</option>
+              <option value="jewelry">Books</option>
+              <option value="jewelry">Groceries</option>
+              <option value="jewelry">sports</option>
+              <option value="jewelry">Toys</option>
+              <option value="jewelry">Beauty Products</option>
+              <option value="jewelry">Futniture</option>
             </Form.Select>
           </InputGroup>
         </div>

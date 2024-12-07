@@ -3,7 +3,7 @@ import React from "react";
 const Login = () => {
   return (
     <div className="flex justify-center items-center p-4">
-      <form className="bg-transparent px-10 py-20 rounded-3xl border-2 border-green-700 h-[700px]  w-1/4">
+      <form className="bg-transparent px-10 py-20 rounded-3xl  h-[700px] shadow-sm  w-1/4">
         <h1 className="text-5xl font-semibold text-white">Login Form</h1>
         <p className="font-medium text-lg text-green-600 mt-4">
           Please Enter your details here{" "}

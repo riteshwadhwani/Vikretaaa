@@ -2,7 +2,7 @@ import React from "react";
 
 const ContactUs = () => {
   return (
-    <div className="bg-dark text-light min-vh-100 d-flex justify-content-center align-items-center">
+    <div className=" text-light min-vh-100 d-flex justify-content-center align-items-center">
       <div className="container py-5">
         <div className="row g-5">
           {/* Left Section */}
