@@ -1,13 +1,14 @@
 import React from 'react'
+import image from "../../assets/images/signupimage.png"
 
 const SignUp = () => {
   return (
     <div>
-          <section className="h-screen bg-[#0e0f14] flex items-center justify-center">
-      <div className="container mx-auto bg-[#0e0f14] p-6">
-        <div className="flex flex-col lg:flex-row bg-[#0e0f14] rounded-2xl shadow-lg overflow-hidden">
+        <div className="h-screen bg-[#0e0f14] flex items-center justify-center">
+      <div className="container mx-auto bg-[#0e0f14] p-6 w-[1000px]">
+        <div className="lg:flex flex-col lg:flex-row bg-[#0e0f14] rounded-2xl shadow-lg overflow-hidden">
           {/* Form Section */}
-          <div className="w-full lg:w-1/2 p-8">
+          <form className="w-full lg:w-1/2 p-8">
             <h2 className="text-center text-3xl font-bold text-white mb-8">Sign Up</h2>
             <form className="space-y-6">
               {/* Name Field */}
@@ -96,19 +97,19 @@ const SignUp = () => {
                 Register
               </button>
             </form>
-          </div>
+          </form>
 
           {/* Image Section */}
           <div className="hidden lg:flex lg:w-1/2 items-center justify-center  bg-[#0e0f14]">
             <img
-              src={MyImage}
+              src={image}
               alt="Sign Up Illustration"
               className="w-full"
             />
           </div>
         </div>
       </div>
-    </section>
+    </div>
     </div>
   )
 }

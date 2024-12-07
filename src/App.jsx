@@ -4,12 +4,13 @@ import Profile from "./pages/Common/Profile";
 import BuyerDashboardLayout from "./pages/Buyer/BuyerDashboardLayout";
 import MyBids from "./pages/Buyer/MyBids";
 import Products from "./pages/Buyer/Products";
-import Navbarr from "./Components/Common/Navbar";
 import LandingPage from "./pages/Common/LandingPage";
 import ContactUs from "./pages/Common/ContactUs";
 import LandingPageLayout from "./pages/Common/LandingPageLayout";
 import MarketPlace from "./pages/Buyer/MarketPlace";
 import SellerDashboard from "./pages/Seller/SellerDashboard";
+import Login from "./pages/Common/Login";
+import SignUp from "./pages/Common/SignUp";
 
 function App() {
   return (
@@ -19,6 +20,8 @@ function App() {
           <Route index element={<LandingPage />} />
           <Route path="contactus" element={<ContactUs />} />
           <Route path="market" element={<MarketPlace />} />
+          <Route path="login" element={<Login />} />
+          <Route path="signup" element={<SignUp />} />
         </Route>
         <Route path="/contactus" element={<ContactUs />} />
         <Route
