@@ -1,122 +1,185 @@
 import React, { useState } from 'react';
-import { Form, Button, Card, Row, Col } from 'react-bootstrap';
-import { BsX } from 'react-icons/bs';
 
-function ProductForm({ onSubmit, onCancel }) {
-  const [formData, setFormData] = useState({
-    title: '',
-    description: '',
-    startingPrice: '',
-    category: '',
-    endTime: '',
-    image: ''
-  });
+const ProductForm = () => {
+  const [productCategory, setProductCategory] = useState('');
+  const [productTitle, setProductTitle] = useState('');
+  const [productType, setProductType] = useState('');
+  const [productPricing, setProductPricing] = useState('');
+  const [productLocation, setProductLocation] = useState('');
+  const [productDescription, setProductDescription] = useState('');
+  const [images, setImages] = useState([]);
+
+  const categories = [
+    'ELECTRONICS',
+    'FASHION',
+    'HOME_APPLIANCES',
+    'BOOKS',
+    'GROCERIES',
+    'SPORTS',
+    'TOYS',
+    'BEAUTY_PRODUCTS',
+    'FURNITURE',
+  ];
+
+  const handleImageUpload = (e) => {
+    const files = Array.from(e.target.files);
+
+    if (files.length + images.length > 3) {
+      alert('You can upload a maximum of 3 images!');
+      return;
+    }
+
+    const imagePreviews = files.map((file) => URL.createObjectURL(file));
+    setImages([...images, ...imagePreviews]);
+  };
+
+  const removeImage = (index) => {
+    const updatedImages = images.filter((_, i) => i !== index);
+    setImages(updatedImages);
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onSubmit({
-      ...formData,
-      status: 'pending',
-      currentBid: parseFloat(formData.startingPrice)
+    console.log('Form Details:', {
+      productCategory,
+      productTitle,
+      productType,
+      productPricing,
+      productLocation,
+      productDescription,
+      images,
     });
   };
 
   return (
-    <Card>
-      <Card.Body>
-        <div className="d-flex justify-content-between align-items-center mb-4">
-          <Card.Title>Add New Product</Card.Title>
-          <Button variant="link" onClick={onCancel} className="text-gray-500 p-0">
-            <BsX size={24} />
-          </Button>
+    <div className="container mt-5">
+      <h2 className="mb-4 text-white">Add Product</h2>
+      <form style={{ padding: '20px', borderRadius: '8px' }} onSubmit={handleSubmit}>
+        <div className="mb-3">
+          <label htmlFor="productCategory" className="form-label text-white">
+            Product Category
+          </label>
+          <select
+            className="form-select text-black"
+            id="productCategory"
+            value={productCategory}
+            onChange={(e) => setProductCategory(e.target.value)}
+          >
+            <option value="" disabled>
+              Select a category
+            </option>
+            {categories.map((category, index) => (
+              <option key={index} value={category}>
+                {category.replace('_', ' ')}
+              </option>
+            ))}
+          </select>
         </div>
 
-        <Form onSubmit={handleSubmit}>
-          <Form.Group className="mb-3">
-            <Form.Label>Title</Form.Label>
-            <Form.Control
+        <div className="row">
+          <div className="col-md-3 mb-3">
+            <label htmlFor="productTitle" className="form-label text-white">
+              Product Title
+            </label>
+            <input
               type="text"
-              required
-              value={formData.title}
-              onChange={(e) => setFormData({ ...formData, title: e.target.value })}
+              className="form-control text-black"
+              id="productTitle"
+              placeholder="Enter title"
+              value={productTitle}
+              onChange={(e) => setProductTitle(e.target.value)}
             />
-          </Form.Group>
-
-          <Form.Group className="mb-3">
-            <Form.Label>Description</Form.Label>
-            <Form.Control
-              as="textarea"
-              rows={3}
-              required
-              value={formData.description}
-              onChange={(e) => setFormData({ ...formData, description: e.target.value })}
-            />
-          </Form.Group>
-
-          <Row>
-            <Col md={6}>
-              <Form.Group className="mb-3">
-                <Form.Label>Starting Price</Form.Label>
-                <Form.Control
-                  type="number"
-                  required
-                  min="0"
-                  value={formData.startingPrice}
-                  onChange={(e) => setFormData({ ...formData, startingPrice: e.target.value })}
-                />
-              </Form.Group>
-            </Col>
-
-            <Col md={6}>
-              <Form.Group className="mb-3">
-                <Form.Label>Category</Form.Label>
-                <Form.Select
-                  required
-                  value={formData.category}
-                  onChange={(e) => setFormData({ ...formData, category: e.target.value })}
-                >
-                  <option value="">Select a category</option>
-                  <option value="electronics">Electronics</option>
-                  <option value="antiques">Antiques</option>
-                  <option value="art">Art</option>
-                  <option value="jewelry">Jewelry</option>
-                </Form.Select>
-              </Form.Group>
-            </Col>
-          </Row>
-
-          <Form.Group className="mb-3">
-            <Form.Label>Image URL</Form.Label>
-            <Form.Control
-              type="url"
-              required
-              value={formData.image}
-              onChange={(e) => setFormData({ ...formData, image: e.target.value })}
-            />
-          </Form.Group>
-
-          <Form.Group className="mb-4">
-            <Form.Label>Auction End Time</Form.Label>
-            <Form.Control
-              type="datetime-local"
-              required
-              value={formData.endTime}
-              onChange={(e) => setFormData({ ...formData, endTime: e.target.value })}
-            />
-          </Form.Group>
-
-          <div className="d-flex justify-content-end gap-2">
-            <Button variant="secondary" onClick={onCancel}>
-              Cancel
-            </Button>
-            <Button variant="primary" type="submit">
-              Add Product
-            </Button>
           </div>
-        </Form>
-      </Card.Body>
-    </Card>
+          <div className="col-md-3 mb-3">
+            <label htmlFor="productType" className="form-label text-white">
+              Type
+            </label>
+            <input
+              type="text"
+              className="form-control text-black"
+              id="productType"
+              placeholder="Enter type"
+              value={productType}
+              onChange={(e) => setProductType(e.target.value)}
+            />
+          </div>
+          <div className="col-md-3 mb-3">
+            <label htmlFor="productPricing" className="form-label text-white">
+              Pricing
+            </label>
+            <input
+              type="text"
+              className="form-control text-black"
+              id="productPricing"
+              placeholder="Enter price"
+              value={productPricing}
+              onChange={(e) => setProductPricing(e.target.value)}
+            />
+          </div>
+          <div className="col-md-3 mb-3">
+            <label htmlFor="productLocation" className="form-label text-white">
+              Location
+            </label>
+            <input
+              type="text"
+              className="form-control text-black"
+              id="productLocation"
+              placeholder="Enter location"
+              value={productLocation}
+              onChange={(e) => setProductLocation(e.target.value)}
+            />
+          </div>
+        </div>
+
+        <div className="mb-3">
+          <label className="form-label text-white">Upload Images</label>
+          <input
+            type="file"
+            className="form-control"
+            multiple
+            accept="image/*"
+            onChange={handleImageUpload}
+            disabled={images.length === 3}
+          />
+        </div>
+
+        <div className="row">
+          {images.map((image, index) => (
+            <div className="col-md-3 mb-3" key={index}>
+              <img src={image} alt={`Preview ${index + 1}`} className="img-thumbnail" />
+              <button
+                type="button"
+                className="btn btn-danger btn-sm mt-2"
+                onClick={() => removeImage(index)}
+              >
+                Remove
+              </button>
+            </div>
+          ))}
+        </div>
+
+        <div className="mb-3">
+          <label htmlFor="productDescription" className="form-label text-white">
+            Product Description
+          </label>
+          <textarea
+            className="form-control text-black"
+            id="productDescription"
+            rows="4"
+            placeholder="Enter description"
+            value={productDescription}
+            onChange={(e) => setProductDescription(e.target.value)}
+          ></textarea>
+        </div>
+
+        <div className="d-flex justify-content-end">
+          <button type="submit" style={{ backgroundColor: 'rgb(34, 197, 94)' }} className="btn">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
   );
-}
+};
 
 export default ProductForm;
