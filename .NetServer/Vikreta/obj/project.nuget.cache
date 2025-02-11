@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vA5A9HfJ4mI=",
+  "dgSpecHash": "kBhX1sWLeOM=",
   "success": true,
-  "projectFilePath": "C:\\Users\\HP\\source\\repos\\Vikreta\\Vikreta\\Vikreta.csproj",
+  "projectFilePath": "D:\\VikretaProject\\Vikretaaa\\.NetServer\\Vikreta\\Vikreta.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\HP\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\bouncycastle.cryptography\\2.5.0\\bouncycastle.cryptography.2.5.0.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\HP\\source\\repos\\Vikreta\\Vikreta\\Vikreta.csproj": {}
+    "D:\\VikretaProject\\Vikretaaa\\.NetServer\\Vikreta\\Vikreta.csproj": {}
   },
   "projects": {
-    "C:\\Users\\HP\\source\\repos\\Vikreta\\Vikreta\\Vikreta.csproj": {
+    "D:\\VikretaProject\\Vikretaaa\\.NetServer\\Vikreta\\Vikreta.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HP\\source\\repos\\Vikreta\\Vikreta\\Vikreta.csproj",
+        "projectUniqueName": "D:\\VikretaProject\\Vikretaaa\\.NetServer\\Vikreta\\Vikreta.csproj",
         "projectName": "Vikreta",
-        "projectPath": "C:\\Users\\HP\\source\\repos\\Vikreta\\Vikreta\\Vikreta.csproj",
+        "projectPath": "D:\\VikretaProject\\Vikretaaa\\.NetServer\\Vikreta\\Vikreta.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HP\\source\\repos\\Vikreta\\Vikreta\\obj\\",
+        "outputPath": "D:\\VikretaProject\\Vikretaaa\\.NetServer\\Vikreta\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
